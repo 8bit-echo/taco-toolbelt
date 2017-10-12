@@ -8,19 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		F051BA961F8417F40021D95B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F051BA951F8417F40021D95B /* AppDelegate.swift */; };
-		F051BA981F8417F40021D95B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F051BA971F8417F40021D95B /* ViewController.swift */; };
 		F051BA9A1F8417F40021D95B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F051BA991F8417F40021D95B /* Assets.xcassets */; };
 		F051BA9D1F8417F40021D95B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F051BA9B1F8417F40021D95B /* Main.storyboard */; };
+		F051BAA61F856C060021D95B /* Tab View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F051BAA51F856C060021D95B /* Tab View Controller.swift */; };
+		F051BAE71F85712A0021D95B /* UpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F051BAE51F85712A0021D95B /* UpdateController.swift */; };
+		F051BAEB1F8571730021D95B /* NewProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F051BAE91F8571730021D95B /* NewProjectController.swift */; };
+		F051BAEF1F8705140021D95B /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F051BAEE1F8705140021D95B /* Shell.swift */; };
+		F051BAF11F870C8C0021D95B /* Script.sh in Resources */ = {isa = PBXBuildFile; fileRef = F051BAF01F870C8C0021D95B /* Script.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F051BA921F8417F40021D95B /* Project Cloner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Cloner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F051BA951F8417F40021D95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F051BA971F8417F40021D95B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F051BA991F8417F40021D95B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F051BA9C1F8417F40021D95B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F051BA9E1F8417F40021D95B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F051BA9F1F8417F40021D95B /* Project_Cloner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Project_Cloner.entitlements; sourceTree = "<group>"; };
+		F051BAA51F856C060021D95B /* Tab View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab View Controller.swift"; sourceTree = "<group>"; };
+		F051BAE51F85712A0021D95B /* UpdateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateController.swift; sourceTree = "<group>"; };
+		F051BAE91F8571730021D95B /* NewProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProjectController.swift; sourceTree = "<group>"; };
+		F051BAED1F857B8B0021D95B /* Project Cloner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Project Cloner.entitlements"; sourceTree = "<group>"; };
+		F051BAEE1F8705140021D95B /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
+		F051BAF01F870C8C0021D95B /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +62,15 @@
 		F051BA941F8417F40021D95B /* Project Cloner */ = {
 			isa = PBXGroup;
 			children = (
+				F051BAED1F857B8B0021D95B /* Project Cloner.entitlements */,
+				F051BAA51F856C060021D95B /* Tab View Controller.swift */,
 				F051BA951F8417F40021D95B /* AppDelegate.swift */,
-				F051BA971F8417F40021D95B /* ViewController.swift */,
+				F051BAEE1F8705140021D95B /* Shell.swift */,
 				F051BA991F8417F40021D95B /* Assets.xcassets */,
 				F051BA9B1F8417F40021D95B /* Main.storyboard */,
+				F051BAF01F870C8C0021D95B /* Script.sh */,
+				F051BAE91F8571730021D95B /* NewProjectController.swift */,
+				F051BAE51F85712A0021D95B /* UpdateController.swift */,
 				F051BA9E1F8417F40021D95B /* Info.plist */,
 				F051BA9F1F8417F40021D95B /* Project_Cloner.entitlements */,
 			);
@@ -122,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F051BAF11F870C8C0021D95B /* Script.sh in Resources */,
 				F051BA9A1F8417F40021D95B /* Assets.xcassets in Resources */,
 				F051BA9D1F8417F40021D95B /* Main.storyboard in Resources */,
 			);
@@ -134,8 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F051BA981F8417F40021D95B /* ViewController.swift in Sources */,
+				F051BAA61F856C060021D95B /* Tab View Controller.swift in Sources */,
 				F051BA961F8417F40021D95B /* AppDelegate.swift in Sources */,
+				F051BAEF1F8705140021D95B /* Shell.swift in Sources */,
+				F051BAEB1F8571730021D95B /* NewProjectController.swift in Sources */,
+				F051BAE71F85712A0021D95B /* UpdateController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Project Cloner/Project_Cloner.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Project Cloner/Project Cloner.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 92UGHKD6H6;
@@ -279,7 +297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Project Cloner/Project_Cloner.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Project Cloner/Project Cloner.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 92UGHKD6H6;

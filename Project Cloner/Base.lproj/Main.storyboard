@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="0On-5Q-Syn">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,45 +675,247 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Project_Cloner" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller-->
-        <scene sceneID="R2V-B0-nI4">
+        <!--Taco Toolbelt-->
+        <scene sceneID="aNJ-kU-WjZ">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-			<connections>
-                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
-                        </connections>
-                    </window>
-                    <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
-                    </connections>
-                </windowController>
-                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="75" y="250"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="hIz-AP-VOD">
-            <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <tabViewController title="Taco Toolbelt" id="0On-5Q-Syn" customClass="Tab_View_Controller" customModule="Project_Cloner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem identifier="" id="QyF-sS-k5m"/>
+                        <tabViewItem identifier="" id="e5V-ql-ByZ"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="uve-O0-FFc">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                        <connections>
+                            <outlet property="delegate" destination="0On-5Q-Syn" id="0td-Cv-wh9"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="uve-O0-FFc" id="uun-aY-XQa"/>
+                        <segue destination="bcs-1N-ztP" kind="relationship" relationship="tabItems" id="Yq2-j4-DYZ"/>
+                        <segue destination="gyh-86-xN4" kind="relationship" relationship="tabItems" id="xo0-qY-USh"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="bYL-PC-uv0" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="84" y="247"/>
+        </scene>
+        <!--Update-->
+        <scene sceneID="jhU-iX-rgt">
+            <objects>
+                <viewController title="Update" id="bcs-1N-ztP" customClass="UpdateController" customModule="Project_Cloner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="3Cg-jJ-ccB">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dEC-Si-xOg">
+                                <rect key="frame" x="20" y="214" width="410" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Project Name" drawsBackground="YES" id="6iB-aS-Vba">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1B8-9z-Qoy">
+                                <rect key="frame" x="354" y="13" width="82" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="A5c-ao-He0"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Update" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Y1j-5K-pjB">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="goButtonPressed:" target="bcs-1N-ztP" id="3Fv-z3-b6x"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7pu-4u-NMW">
+                                <rect key="frame" x="18" y="261" width="414" height="19"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Update Project" id="sa3-yl-0y6">
+                                    <font key="font" metaFont="systemBold" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="eTf-qW-Bb6">
+                                <rect key="frame" x="18" y="178" width="66" height="18"/>
+                                <buttonCell key="cell" type="check" title="Git Pull" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="4UD-4z-uxS">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="pOB-jo-9QE">
+                                <rect key="frame" x="18" y="144" width="106" height="18"/>
+                                <buttonCell key="cell" type="check" title="Sync Uploads" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="fCB-ob-Bfb">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="3fF-4s-XkM">
+                                <rect key="frame" x="18" y="110" width="106" height="18"/>
+                                <buttonCell key="cell" type="check" title="Sync Databse" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="yyI-d1-aIy">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1B8-9z-Qoy" secondAttribute="bottom" constant="20" id="Br4-wz-nEY"/>
+                            <constraint firstItem="7pu-4u-NMW" firstAttribute="leading" secondItem="3Cg-jJ-ccB" secondAttribute="leading" constant="20" id="TWI-2w-b0N"/>
+                            <constraint firstItem="eTf-qW-Bb6" firstAttribute="top" secondItem="dEC-Si-xOg" secondAttribute="bottom" constant="20" id="TlD-k4-ClD"/>
+                            <constraint firstAttribute="trailing" secondItem="1B8-9z-Qoy" secondAttribute="trailing" constant="20" id="WoC-dw-qd9"/>
+                            <constraint firstItem="dEC-Si-xOg" firstAttribute="top" secondItem="7pu-4u-NMW" secondAttribute="bottom" constant="25" id="WrA-ok-Ear"/>
+                            <constraint firstItem="eTf-qW-Bb6" firstAttribute="leading" secondItem="3Cg-jJ-ccB" secondAttribute="leading" constant="20" id="Xc8-q6-6Hs"/>
+                            <constraint firstAttribute="trailing" secondItem="7pu-4u-NMW" secondAttribute="trailing" constant="20" id="ZAc-cV-6gs"/>
+                            <constraint firstAttribute="trailing" secondItem="dEC-Si-xOg" secondAttribute="trailing" constant="20" id="ar7-Ch-h08"/>
+                            <constraint firstItem="dEC-Si-xOg" firstAttribute="leading" secondItem="3Cg-jJ-ccB" secondAttribute="leading" constant="20" id="awE-Ni-q1D"/>
+                            <constraint firstItem="eTf-qW-Bb6" firstAttribute="top" secondItem="dEC-Si-xOg" secondAttribute="bottom" constant="20" id="df6-7Y-gnW"/>
+                            <constraint firstItem="3fF-4s-XkM" firstAttribute="top" secondItem="pOB-jo-9QE" secondAttribute="bottom" constant="20" id="eeU-F4-k96"/>
+                            <constraint firstItem="7pu-4u-NMW" firstAttribute="top" secondItem="3Cg-jJ-ccB" secondAttribute="top" constant="20" id="pfK-qs-Pqi"/>
+                            <constraint firstItem="pOB-jo-9QE" firstAttribute="leading" secondItem="3Cg-jJ-ccB" secondAttribute="leading" constant="20" id="vF0-Hc-eT9"/>
+                            <constraint firstItem="3fF-4s-XkM" firstAttribute="leading" secondItem="3Cg-jJ-ccB" secondAttribute="leading" constant="20" id="vPG-wl-o6b"/>
+                            <constraint firstItem="pOB-jo-9QE" firstAttribute="top" secondItem="eTf-qW-Bb6" secondAttribute="bottom" constant="20" id="wpg-tR-R9f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gitPullCheckBox" destination="eTf-qW-Bb6" id="ccE-K8-gFC"/>
+                        <outlet property="goButton" destination="1B8-9z-Qoy" id="Eua-W6-0da"/>
+                        <outlet property="projectNameTextField" destination="dEC-Si-xOg" id="YfU-lB-Hn7"/>
+                        <outlet property="syncDatabaseCheckBox" destination="3fF-4s-XkM" id="zfF-nt-oza"/>
+                        <outlet property="syncUploadsCheckBox" destination="pOB-jo-9QE" id="gc6-Hu-4Ac"/>
+                    </connections>
+                </viewController>
+                <customObject id="eKz-iH-fcB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-240" y="738"/>
+        </scene>
+        <!--New-->
+        <scene sceneID="STP-0D-kuE">
+            <objects>
+                <viewController title="New" id="gyh-86-xN4" customClass="NewProjectController" customModule="Project_Cloner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="INF-Xc-CoX">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="514"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8Zw-fC-nb4">
+                                <rect key="frame" x="20" y="430" width="410" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Project Name" drawsBackground="YES" id="GRq-sN-Ft1">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Ue-sy-Chf">
+                                <rect key="frame" x="20" y="388" width="410" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Git Repo URL" drawsBackground="YES" id="mqw-0G-Ku3">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lIJ-rC-BcZ">
+                                <rect key="frame" x="354" y="13" width="82" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="XZF-12-Jmy"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Create" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Utx-TO-4im">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="goButtonPressed:" target="gyh-86-xN4" id="P4v-W5-m0J"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NOD-Pt-rQf">
+                                <rect key="frame" x="18" y="477" width="414" height="19"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="New Project" id="ccG-eu-baF">
+                                    <font key="font" metaFont="systemBold" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GbP-oJ-suL">
+                                <rect key="frame" x="351" y="301" width="85" height="32"/>
+                                <buttonCell key="cell" type="push" title="Browse" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bE8-zf-cuU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="cloneDirBrowseButtonPressed:" target="gyh-86-xN4" id="m7k-ba-MUw"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OTE-oa-WM0">
+                                <rect key="frame" x="23" y="363" width="409" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Clone Directory" id="303-Sa-sNb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4if-Th-cJU">
+                                <rect key="frame" x="22" y="339" width="410" height="22"/>
+                                <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="64R-Uq-v5K">
+                                    <font key="font" metaFont="system"/>
+                                    <url key="url" string="file://localhost/Applications/"/>
+                                    <color key="backgroundColor" red="0.89803921568627454" green="0.92549019607843142" blue="0.97254901960784312" alpha="1" colorSpace="deviceRGB"/>
+                                </pathCell>
+                            </pathControl>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="CKR-67-WyC">
+                                <rect key="frame" x="20" y="51" width="410" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="0hA-x3-0it"/>
+                                </constraints>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Multiline Label" drawsBackground="YES" id="2Pq-7N-QbK">
+                                    <font key="font" size="10" name="Monaco"/>
+                                    <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="8Zw-fC-nb4" firstAttribute="leading" secondItem="INF-Xc-CoX" secondAttribute="leading" constant="20" id="1m9-vD-2i6"/>
+                            <constraint firstItem="8Zw-fC-nb4" firstAttribute="top" secondItem="NOD-Pt-rQf" secondAttribute="bottom" constant="25" id="2iD-3X-est"/>
+                            <constraint firstItem="NOD-Pt-rQf" firstAttribute="leading" secondItem="INF-Xc-CoX" secondAttribute="leading" constant="20" id="49j-ky-iQ5"/>
+                            <constraint firstItem="1Ue-sy-Chf" firstAttribute="leading" secondItem="INF-Xc-CoX" secondAttribute="leading" constant="20" id="54Q-9X-kDu"/>
+                            <constraint firstAttribute="bottom" secondItem="lIJ-rC-BcZ" secondAttribute="bottom" constant="20" id="5xT-kw-D74"/>
+                            <constraint firstItem="CKR-67-WyC" firstAttribute="leading" secondItem="INF-Xc-CoX" secondAttribute="leading" constant="20" id="9gw-q3-Mgx"/>
+                            <constraint firstAttribute="trailing" secondItem="1Ue-sy-Chf" secondAttribute="trailing" constant="20" id="EXo-Uf-Nso"/>
+                            <constraint firstItem="GbP-oJ-suL" firstAttribute="top" secondItem="4if-Th-cJU" secondAttribute="bottom" constant="10" id="JUz-pI-lYm"/>
+                            <constraint firstAttribute="trailing" secondItem="NOD-Pt-rQf" secondAttribute="trailing" constant="20" id="Jwa-1I-zhl"/>
+                            <constraint firstItem="4if-Th-cJU" firstAttribute="top" secondItem="OTE-oa-WM0" secondAttribute="bottom" constant="2" id="LWN-yv-IeD"/>
+                            <constraint firstAttribute="trailing" secondItem="GbP-oJ-suL" secondAttribute="trailing" constant="20" id="RuR-Ao-Phy"/>
+                            <constraint firstItem="1Ue-sy-Chf" firstAttribute="top" secondItem="8Zw-fC-nb4" secondAttribute="bottom" constant="20" id="Tn4-R9-jf7"/>
+                            <constraint firstItem="lIJ-rC-BcZ" firstAttribute="top" secondItem="CKR-67-WyC" secondAttribute="bottom" constant="10" id="Vyo-8e-y2k"/>
+                            <constraint firstAttribute="trailing" secondItem="4if-Th-cJU" secondAttribute="trailing" constant="18" id="Waw-MH-ryr"/>
+                            <constraint firstItem="OTE-oa-WM0" firstAttribute="top" secondItem="1Ue-sy-Chf" secondAttribute="bottom" constant="8" id="bzG-H2-19d"/>
+                            <constraint firstAttribute="trailing" secondItem="CKR-67-WyC" secondAttribute="trailing" constant="20" id="i4T-Nc-B3W"/>
+                            <constraint firstAttribute="trailing" secondItem="OTE-oa-WM0" secondAttribute="trailing" constant="20" id="kWh-IH-gwk"/>
+                            <constraint firstItem="NOD-Pt-rQf" firstAttribute="top" secondItem="INF-Xc-CoX" secondAttribute="top" constant="18" id="kmo-Qx-i15"/>
+                            <constraint firstItem="4if-Th-cJU" firstAttribute="leading" secondItem="INF-Xc-CoX" secondAttribute="leading" constant="22" id="n3F-bQ-ec5"/>
+                            <constraint firstAttribute="trailing" secondItem="lIJ-rC-BcZ" secondAttribute="trailing" constant="20" id="nyT-Oo-wMk"/>
+                            <constraint firstAttribute="trailing" secondItem="8Zw-fC-nb4" secondAttribute="trailing" constant="20" id="tvK-1X-5FF"/>
+                            <constraint firstItem="OTE-oa-WM0" firstAttribute="leading" secondItem="INF-Xc-CoX" secondAttribute="leading" constant="25" id="vSs-Ot-0Dv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cloneDirPathView" destination="4if-Th-cJU" id="puy-EP-R63"/>
+                        <outlet property="console" destination="CKR-67-WyC" id="dIY-iS-Ug0"/>
+                        <outlet property="gitRepoTextField" destination="1Ue-sy-Chf" id="mCg-oq-PWk"/>
+                        <outlet property="goButton" destination="lIJ-rC-BcZ" id="5k5-Gt-EgI"/>
+                        <outlet property="projectNameTextField" destination="8Zw-fC-nb4" id="HeH-Qp-whf"/>
+                    </connections>
+                </viewController>
+                <customObject id="lP9-7L-N5m" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="845"/>
         </scene>
     </scenes>
 </document>
